@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1
+    </title>
+</head>
+<body>
+
+    <script>
+        let variavel = prompt("Digite alguma coisa:")
+        if(confirm("Deseja ver o tipo dessa variavel?")) {
+            if(!isNaN(variavel)) {
+                variavel = parseInt(variavel)
+            }
+            document.write(typeof(variavel))
+        }else {
+            document.write("Obrigado por visitar esta pagina");
+        }
+    </script>
+    
+</body>
+</html>
