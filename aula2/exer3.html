@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        input {
+            margin-top: 15px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.getElementById("botao").addEventListener("click", () => {
+                const valor = document.getElementById("texto").value;
+                var re = /[\W_]/g;
+                var lowRegStr = valor.toLowerCase().replace(re, '');
+                var reverseStr = lowRegStr.split('').reverse().join('');
+                if(reverseStr === lowRegStr) {
+                    alert("Esse texto é um palíndromo")
+                }else {
+                    alert("Esse texto não é um palíndromo")
+
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <form>
+            <input type="text" id="texto" class="form-control" placeholder="Digite um texto...">
+            <input type="button" id="botao" value="Verificar se é Palíndromo"
+                class="btn btn-primary btn-lg form-control">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
