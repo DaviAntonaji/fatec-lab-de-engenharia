@@ -58,14 +58,12 @@
           return `
         <li id="${this.id}">
           <span>${this.texto}</span>
-          <button class="btn " onclick="lista.reordenarItem('${
-            this.id
-          }', ${this.posicao - 1})" ${
-            this.posicao === 0 ? "disabled" : ""
-          }>&#8593;</button>
-          <button class="btn" onclick="lista.reordenarItem('${
-            this.id
-          }', ${this.posicao + 1})" ${
+          <button class="btn " onclick="lista.reordenarItem('${this.id}', ${
+            this.posicao - 1
+          })" ${this.posicao === 0 ? "disabled" : ""}>&#8593;</button>
+          <button class="btn" onclick="lista.reordenarItem('${this.id}', ${
+            this.posicao + 1
+          })" ${
             this.posicao === lista.itens.length - 1 ? "disabled" : ""
           }>&#8595;</button>
           <button class="btn btn-danger ml" onclick="lista.removerItem('${
@@ -116,11 +114,10 @@
 
       const lista = new Lista();
       document.addEventListener("DOMContentLoaded", () => {
-        document
-          .getElementById("btnAdd")
-          .addEventListener("click", () =>
-            lista.adicionarItem(document.getElementById("novoItem").value)
-          );
+        document.getElementById("btnAdd").addEventListener("click", () => {
+          lista.adicionarItem(document.getElementById("novoItem").value);
+          document.getElementById("novoItem").value =  ""
+        });
       });
     </script>
   </body>
