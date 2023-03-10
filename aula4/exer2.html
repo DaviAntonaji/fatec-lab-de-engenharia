@@ -15,12 +15,15 @@
       ul {
         padding: 0;
         list-style: none;
+        width: 100%;
       }
       li {
         display: flex;
+        line-break: auto;
         align-items: center;
         margin-bottom: 10px;
         padding: 10px;
+        width:100%;
         background-color: #f7f7f7;
         border-radius: 5px;
       }
@@ -30,6 +33,17 @@
       }
       li button:first-child {
         margin-left: 0;
+      }
+      .flex {
+        display: flex;
+        width:100%;
+        flex-direction: row;
+      }
+      .space-between {
+        justify-content: space-between;
+      }
+      input, button, #lista {
+        margin-top: 15px;
       }
     </style>
   </head>
@@ -57,10 +71,16 @@
         renderizar() {
           return `
         <li id="${this.id}">
-          <span>${this.texto}</span>
-          <button class="btn " onclick="lista.reordenarItem('${this.id}', ${
-            this.posicao - 1
-          })" ${this.posicao === 0 ? "disabled" : ""}>&#8593;</button>
+          <div class="flex space-between">
+            <div >
+              <span>${this.texto}</span>
+              </div>
+              <div >
+                <button class="btn " onclick="lista.reordenarItem('${
+                  this.id
+                }', ${this.posicao - 1})" ${
+            this.posicao === 0 ? "disabled" : ""
+          }>&#8593;</button>
           <button class="btn" onclick="lista.reordenarItem('${this.id}', ${
             this.posicao + 1
           })" ${
@@ -69,6 +89,10 @@
           <button class="btn btn-danger ml" onclick="lista.removerItem('${
             this.id
           }')">🗑</button>
+                </div>
+
+            </div>
+         
         </li>
       `;
         }
@@ -115,8 +139,11 @@
       const lista = new Lista();
       document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("btnAdd").addEventListener("click", () => {
-          lista.adicionarItem(document.getElementById("novoItem").value);
-          document.getElementById("novoItem").value =  ""
+          const value = document.getElementById("novoItem").value
+          if(value != "") {
+            lista.adicionarItem(value);
+            document.getElementById("novoItem").value = "";
+          }
         });
       });
     </script>
