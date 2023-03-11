@@ -11,6 +11,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <style>
       .container {
         display: flex;
@@ -29,6 +35,21 @@
         text-align: center;
         border: 1px solid #fff;
       }
+      .icon {
+        margin: 0 auto 20px auto;
+        padding-top: 17px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        width: 72px;
+        height: 72px;
+        background: #07292c;
+      }
+      .icon i {
+        font-size: 36px;
+        line-height: 1;
+        color: #fff;
+      }
       .offset {
         margin-left: 1%;
         margin-bottom: 1%;
@@ -36,34 +57,60 @@
       .coluna {
         width: 32.3%;
       }
+      @media screen and (max-width: 768px) {
+        .coluna {
+          width: 100%;
+        }
+      }
+      h1 {
+        color: #07292c;
+      }
+      h2 {
+        color: #0d4145;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
+      <h1>Atividades das aulas de Laboratório de Engenharia de Software</h1>
+      <h2>Davi de Melo Antonaji</h2>
       <div class="row">
         <div class="coluna offset icon-box">
-         <h3 class="title">Aula 1</h3>
+          <div class="icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3 class="title">Aula 1</h3>
           <a href="aula1/exer1.html">Atividade 01: Tipo do dado</a><br />
           <a href="aula1/exer2.html">Atividade 02: Primo</a><br />
           <a href="aula1/exer3.html">Atividade 03: Par/ímpar</a><br />
           <a href="aula1/exer4.html">Atividade 04: Fatorial</a><br />
         </div>
         <div class="coluna offset icon-box">
-         <h3 class="title">Aula 2</h3>
+          <div class="icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3 class="title">Aula 2</h3>
           <a href="aula2/exer1.html">Atividade 01: Exibir Data</a><br />
           <a href="aula2/exer2.html">Atividade 02: Relogio</a><br />
-          <a href="aula2/exer3.html">Atividade 03: Verificar Palíndromo</a><br />
+          <a href="aula2/exer3.html">Atividade 03: Verificar Palíndromo</a
+          ><br />
         </div>
         <div class="coluna offset icon-box">
-         <h3 class="title">Aula 3</h3>
+          <div class="icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3 class="title">Aula 3</h3>
           <a href="aula3/exer1.html">Atividade 01: Arrays</a><br />
           <a href="aula3/exer2.html"
             >Atividade 02: Calcula valor de mercado de carros</a
           ><br />
         </div>
         <div class="coluna offset icon-box">
-         <h3 class="title">Aula 4</h3>
+          <div class="icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3 class="title">Aula 4</h3>
           <a href="aula4/exer1.html">Atividade 01: Formulario Dinamico</a><br />
           <a href="aula4/exer2.html">Atividade 02: Todo-list</a><br />
         </div>

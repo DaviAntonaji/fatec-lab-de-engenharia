@@ -11,6 +11,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <style>
       ul {
         padding: 0;
@@ -80,15 +86,15 @@
                   this.id
                 }', ${this.posicao - 1})" ${
             this.posicao === 0 ? "disabled" : ""
-          }>&#8593;</button>
+          }><i class="fas fa-long-arrow-up"></i></button>
           <button class="btn" onclick="lista.reordenarItem('${this.id}', ${
             this.posicao + 1
           })" ${
             this.posicao === lista.itens.length - 1 ? "disabled" : ""
-          }>&#8595;</button>
+          }><i class="fas fa-long-arrow-down"></i></button>
           <button class="btn btn-danger ml" onclick="lista.removerItem('${
             this.id
-          }')">🗑</button>
+          }')"><i class="fas fa-trash"></i></button>
                 </div>
 
             </div>
